@@ -1,0 +1,38 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.nav a,
+.nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  background: #eee;
+  border-radius: 0.2rem;
+}
+
+.nav a:hover,
+.nav button:hover,
+.nav a:focus,
+.nav button:focus {
+  background: white;
+  box-shadow: 0 0 0 3px #eee;
+  border-color: #333;
+  outline: none;
+}
+
+.nav a:global(.active) {
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
+}
+
+.nav a:global(.active) svg > * {
+  fill: #fb1;
+}
